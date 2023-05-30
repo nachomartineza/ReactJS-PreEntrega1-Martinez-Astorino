@@ -1,16 +1,26 @@
 import './App.css';
-import Header from './components/Header';
+import Destacado from './components/Destacado';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import ItemDetailContainer from './components/ItemDetail';
 import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
-    return (
-        <div className='container-fluid'>
-            <Header />
-            <ItemListContainer greeting={"There are no products available."} />
-            <Footer />
-        </div> 
-    )
+  return (
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path={"/"} element={<ItemListContainer />} />
+          <Route path={"/category/:id"} element={<ItemListContainer />} />
+          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+          <Route path={"/destacados"} element={<Destacado />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
