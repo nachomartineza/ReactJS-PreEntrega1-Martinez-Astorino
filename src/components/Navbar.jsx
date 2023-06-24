@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <ul className="nav justify-content-center">
             <li className="nav-item">
-                <NavLink className="nav-link text-dark" activeclassname="text-danger" aria-current="page" to={"/destacados"}>About F1</NavLink>
+                <NavLink className="nav-link text-dark" activeclassname="text-danger" aria-current="page" to={"/destacados"}>Home</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link text-dark" activeclassname="text-danger" to={"/category/Race Calendar"}>Race Calendar</NavLink>
